@@ -1,0 +1,26 @@
+# Japanese Vocabulary Flashcards
+# Video: 日语 N5 词汇 Lesson 1【家族・人】①
+# URL: https://www.youtube.com/watch?v=QBhL5VtfXEc
+# Format: 日本語 (hiragana / romaji) → 中文 | English
+
+## Personal Pronouns (人称代名词)
+私 (わたし / watashi) → 我 | I, me
+あなた (あなた / anata) → 你 | You
+彼 (かれ / kare) → 他 | He
+彼女 (かのじょ / kanojo) → 她 | She
+
+## Family - Parents (家长)
+お母さん (おかあさん / okaasan) → 母亲（尊称，他人的） | Mother (polite - others')
+母 (はは / haha) → 母亲（自己的） | Mother (my own)
+お父さん (おとうさん / otousan) → 父亲（尊称，他人的） | Father (polite - others')
+父 (ちち / chichi) → 父亲（自己的） | Father (my own)
+
+## Family - Siblings (兄弟姐妹)
+お兄さん (おにいさん / oniisan) → 哥哥（尊称，他人的） | Older brother (polite)
+兄 (あに / ani) → 哥哥（自己的） | Older brother (my own)
+お姉さん (おねえさん / oneesan) → 姐姐（尊称，他人的） | Older sister (polite)
+姉 (あね / ane) → 姐姐（自己的） | Older sister (my own)
+
+---
+**总词汇量**: 12+ 个单词和表达
+**格式说明**: 日本語 (平假名 / 罗马音) → 中文 | English
