@@ -1,269 +1,350 @@
-# Japanese YouTube Video Transcriber 🎌
+# Japanese YouTube Transcriber - AI Skill 🎌🤖
 
-A powerful Python tool for transcribing Japanese YouTube videos and creating comprehensive study materials with AI-powered analysis.
+An intelligent Claude AI skill for transcribing Japanese YouTube videos and automatically generating comprehensive study materials.
 
+[![AI Powered](https://img.shields.io/badge/AI-Claude%20Powered-blueviolet)](https://www.anthropic.com)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![AI Powered](https://img.shields.io/badge/AI-Claude%20%2B%20Whisper-blueviolet)](https://www.anthropic.com)
-
-## 🆕 Two Versions Available
-
-### 🤖 **AI-Powered Version** (Recommended)
-Uses **Claude AI** to automatically extract vocabulary, generate romaji, and create complete study materials.
-
-### 📝 **Basic Version**
-Provides transcription with templates that you fill in manually.
 
 ---
 
-## ✨ Features
+## ⚡ What Makes This Special
 
-| Feature | Basic Version | AI-Powered Version |
-|---------|--------------|-------------------|
-| Audio Download | ✅ | ✅ |
-| Transcription (Whisper) | ✅ | ✅ |
-| Timestamped Segments | ✅ | ✅ |
-| **Vocabulary Extraction** | ❌ Manual | ✅ **Automatic** |
-| **Romaji Generation** | ❌ Manual | ✅ **AI-Generated** |
-| **Chinese Translation** | ❌ Manual | ✅ **AI-Generated** |
-| **Grammar Analysis** | ❌ Manual | ✅ **AI-Generated** |
-| **Study Tips** | ❌ Manual | ✅ **AI-Generated** |
+This is **NOT just a Python script** - it's an **AI-powered skill** for Claude Code that automatically:
+
+✅ Transcribes Japanese videos  
+✅ **Extracts vocabulary automatically** using AI  
+✅ **Generates romaji** intelligently  
+✅ **Provides translations** (Chinese + English)  
+✅ **Explains grammar patterns**  
+✅ **Creates formatted study materials**  
+
+**All in ONE step** - just ask Claude!
 
 ---
 
 ## 🚀 Quick Start
 
-### Installation
+### For Claude Code Users (Recommended)
+
+1. **Install the skill**:
+```bash
+# Clone to your Claude skills directory
+git clone https://github.com/chinazane/Youtube-Transcriber.git ~/.claude/skills/transcribe-jp-video
+
+# Install dependencies
+cd ~/.claude/skills/transcribe-jp-video
+pip install -r requirements.txt
+```
+
+2. **Use with Claude**:
+```
+Just ask Claude:
+"Transcribe this Japanese video: https://www.youtube.com/watch?v=VIDEO_ID"
+
+Claude will automatically handle everything!
+```
+
+---
+
+### For Standalone Use
 
 ```bash
-# Clone the repository
+# Clone anywhere
 git clone https://github.com/chinazane/Youtube-Transcriber.git
 cd Youtube-Transcriber
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Run transcription
+python transcribe.py <youtube-url> [lesson-name]
+```
+
+Then ask Claude to analyze the generated transcript.
+
+---
+
+## 💡 How It Works
+
+### Traditional Approach:
+```
+1. Run Python script manually
+2. Get transcript file
+3. Copy transcript to Claude
+4. Ask Claude to analyze
+5. Wait for Claude to extract vocabulary
+6. Wait for Claude to generate romaji
+7. Format results manually
+
+Time: 15-20 minutes of manual work
+```
+
+### AI Skill Approach:
+```
+1. Ask Claude: "Transcribe this video: [URL]"
+
+Claude automatically:
+- Runs transcription
+- Analyzes content
+- Extracts vocabulary
+- Generates romaji
+- Creates translations
+- Formats study materials
+- Presents results
+
+Time: 30 seconds + 5 min processing = Done!
+```
+
+**Time Saved: ~15 minutes per video**
+
+---
+
+## 📖 Example Usage
+
+### With Claude Code (AI Skill)
+
+**You**:
+```
+Transcribe this Japanese N5 lesson:
+https://www.youtube.com/watch?v=QBhL5VtfXEc
+```
+
+**Claude**:
+```
+I'll transcribe and analyze that for you!
+
+[Transcribing...]
+✅ Video: 日语 N5 词汇 Lesson 1【家族・人】①
+
+Here are your study materials:
+
+## Vocabulary
+
+| Japanese | Reading | Romaji | 中文 | English | Timestamp |
+|----------|---------|--------|------|---------|-----------|
+| 私 | わたし | watashi | 我 | I, me | 30s-58s |
+| あなた | あなた | anata | 你 | You | 58s-68s |
+| 彼 | かれ | kare | 他 | He | 68s-84s |
+| 彼女 | かのじょ | kanojo | 她 | She | 84s-90s |
+| お母さん | おかあさん | okaasan | 母亲 | Mother | 90s-102s |
+...
+
+## Grammar Points
+
+### Personal Pronouns
+The lesson covers basic Japanese personal pronouns...
+
+### Family Terms - Polite vs Plain
+Japanese has different forms for family terms...
+
+## Study Tips
+1. Practice the polite/plain distinction
+2. Use timestamps to review specific vocabulary
+3. Focus on the お〜さん pattern for polite forms
+
+[Complete, formatted study materials ready to use!]
 ```
 
 ---
 
-## 📖 Usage
-
-### Option 1: AI-Powered (Recommended) 🤖
-
-**Automatic vocabulary extraction and romaji generation!**
+### Standalone Use
 
 ```bash
-# Basic usage
-python transcribe-jp-ai.py <youtube-url>
-
-# With lesson name
-python transcribe-jp-ai.py <youtube-url> lesson1
-
-# Example
-python transcribe-jp-ai.py "https://www.youtube.com/watch?v=QBhL5VtfXEc" "n5-lesson1"
+python transcribe.py "https://www.youtube.com/watch?v=QBhL5VtfXEc" "n5-lesson1"
 ```
 
-**What you get:**
-1. ✅ Full transcript with timestamps
-2. ✅ Claude AI prompt file
-3. 🤖 **Ask Claude** to analyze the transcript
-4. ✅ **Automatic vocabulary list** with romaji and translations
-5. ✅ **Grammar explanations**
-6. ✅ **Study tips**
-
-**Then ask Claude:**
-```
-"Please analyze the transcript at [file path] and create study materials"
-```
-
-Claude will generate:
-- Complete vocabulary tables with romaji
-- Chinese and English translations
-- Grammar point explanations
-- Example sentences
-- Study recommendations
-
----
-
-### Option 2: Basic Version 📝
-
-**Manual approach - you fill in the details**
-
-```bash
-# Basic usage
-python transcribe-jp-video.py <youtube-url>
-
-# With lesson name
-python transcribe-jp-video.py <youtube-url> lesson1
-```
-
-**What you get:**
-1. ✅ Full transcript with timestamps
-2. ✅ Flashcard template (you add romaji/translations)
-3. ✅ Review guide template (you add grammar notes)
-
----
-
-## 📦 Output Files
-
-### AI-Powered Version Output
-
-```
-youtube_lesson1_transcript.txt          # Raw transcript with timestamps
-youtube_lesson1_claude_prompt.md        # AI analysis prompt
-youtube_lesson1_vocabulary.md           # Generated by Claude
-youtube_lesson1_flashcards.txt          # Generated by Claude
-youtube_lesson1_review.md               # Generated by Claude
-```
-
-### Basic Version Output
-
-```
-youtube_lesson1_transcript.txt          # Raw transcript
-youtube_lesson1_flashcards.txt          # Template (fill in manually)
-youtube_lesson1_review.md               # Template (fill in manually)
-```
-
----
-
-## 🎯 Examples
-
-### Example 1: N5 Vocabulary Lesson (AI-Powered)
-
-```bash
-python transcribe-jp-ai.py "https://www.youtube.com/watch?v=QBhL5VtfXEc" "n5-family"
-```
-
-**Output:**
+Output:
 ```
 📥 Downloading audio...
 ✅ Audio downloaded
 🎤 Transcribing with Whisper AI...
 ✅ Transcription complete!
+
 📁 Files created:
-   📝 youtube_n5-family_transcript.txt
-   🤖 youtube_n5-family_claude_prompt.md
-
-🤖 Next: Ask Claude to analyze the transcript!
+   📝 youtube_n5-lesson1_transcript.txt
+   
+{
+  "video_title": "日语 N5 词汇 Lesson 1【家族・人】①",
+  "youtube_url": "https://www.youtube.com/watch?v=QBhL5VtfXEc",
+  "transcript_text": "みなさんこんにちは...",
+  "segments": [...]
+}
 ```
 
-**Then ask Claude:**
-```
-Please analyze the transcript at ~/Desktop/youtube_n5-family_transcript.txt 
-and create comprehensive study materials with vocabulary tables, romaji, 
-and Chinese translations.
-```
-
-**Claude generates:**
-
-| Japanese | Reading | Romaji | 中文 | English |
-|----------|---------|--------|------|---------|
-| 私 | わたし | watashi | 我 | I, me |
-| 家族 | かぞく | kazoku | 家庭 | Family |
-| お母さん | おかあさん | okaasan | 母亲 | Mother |
-
-Plus grammar explanations, study tips, and more!
+Then paste the transcript into Claude for analysis.
 
 ---
 
-### Example 2: Basic Version
+## 🎯 Features
 
-```bash
-python transcribe-jp-video.py "https://www.youtube.com/watch?v=u720gZpl54A" "lesson2"
-```
+### Automatic Transcription
+- Downloads audio from YouTube automatically
+- Uses OpenAI Whisper for high-quality Japanese transcription
+- Generates timestamped segments for easy video reference
 
-You then manually fill in the flashcard and review templates.
+### AI-Powered Analysis (Claude)
+- **Vocabulary Extraction**: Claude identifies important words automatically
+- **Romaji Generation**: AI-generated romanization (handles special readings)
+- **Smart Translation**: Context-aware Chinese and English translations
+- **Grammar Analysis**: Identifies and explains patterns used
+- **Study Tips**: Personalized learning recommendations
 
----
-
-## 🧠 Why Use AI-Powered Version?
-
-### Traditional Workflow (Basic Version):
-1. Run script → Get transcript
-2. Listen to video and transcript
-3. Manually identify vocabulary (30-60 min)
-4. Look up readings and meanings (60-90 min)
-5. Generate romaji manually (30 min)
-6. Format everything (30 min)
-
-**Total: 2.5-4 hours per video** 😰
-
-### AI-Powered Workflow:
-1. Run script → Get transcript (5 min)
-2. Ask Claude to analyze (2 min)
-3. Review and edit Claude's output (10-15 min)
-
-**Total: 15-20 minutes per video** 🎉
-
-**Time saved: 2-3.5 hours per video!**
+### Formatted Output
+- Beautiful markdown tables
+- Ready-to-use flashcards
+- Organized by topic
+- Includes timestamps for video reference
 
 ---
 
-## 💡 Advanced Usage
+## 📦 What's Included
 
-### Specify lesson level
-```bash
-python transcribe-jp-ai.py [URL] "jlpt-n3-grammar"
 ```
-Tell Claude: "Focus on N3 grammar patterns"
-
-### Multiple videos
-```bash
-# Transcribe multiple videos
-python transcribe-jp-ai.py [URL1] "lesson1"
-python transcribe-jp-ai.py [URL2] "lesson2"
-python transcribe-jp-ai.py [URL3] "lesson3"
+Youtube-Transcriber/
+├── skill.md              # AI skill documentation
+├── transcribe.py         # Transcription script
+├── requirements.txt      # Python dependencies
+├── README.md            # This file
+├── LICENSE              # MIT License
+└── examples/            # Sample outputs
+    ├── sample_transcript.txt
+    ├── sample_flashcards.txt
+    └── sample_review.md
 ```
-Then ask Claude: "Combine vocabulary from lessons 1-3"
-
-### Custom analysis
-Ask Claude specific questions:
-- "What are the main verb conjugations used?"
-- "Explain the cultural context of these expressions"
-- "Create Anki-compatible flashcards"
 
 ---
 
-## 📋 Requirements
+## 🔧 Installation
 
-- Python 3.8+
-- yt-dlp (YouTube downloader)
-- openai-whisper (Speech-to-text)
-- Claude AI (for AI-powered version)
+### Prerequisites
 
-### Installation
+- Python 3.8 or higher
+- Claude Code (for AI skill features)
+- ffmpeg (for audio processing)
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Or manually:
-```bash
-pip install yt-dlp openai-whisper
-```
-
-For macOS, also install ffmpeg:
+On macOS:
 ```bash
 brew install ffmpeg
 ```
 
 ---
 
-## 🎓 Use Cases
+## 📚 Use Cases
 
-- 📚 **Japanese learners** studying from YouTube content
-- 🎓 **Teachers** creating lesson materials
-- 📝 **Content creators** making study guides
-- 🔍 **Researchers** analyzing Japanese language patterns
-- 🌐 **Subtitle creators** for Japanese videos
+### For Language Learners
+- Study Japanese from YouTube videos
+- Get AI-analyzed vocabulary automatically
+- Save hours of manual work
+
+### For Teachers
+- Create lesson materials quickly
+- Generate consistent study guides
+- Focus on teaching, not formatting
+
+### For Content Creators
+- Transcribe videos for subtitles
+- Create study guides for viewers
+- Analyze language usage patterns
+
+---
+
+## 🎓 Advanced Usage
+
+### Specify Lesson Level
+```
+Transcribe this JLPT N3 lesson: [URL]
+```
+Claude will focus on N3-level patterns.
+
+### Focus on Specific Topics
+```
+Transcribe this video and focus on verb conjugations: [URL]
+```
+
+### Multiple Videos
+```
+Transcribe these videos and combine the vocabulary:
+1. [URL1]
+2. [URL2]
+3. [URL3]
+```
+
+### Custom Formats
+```
+Transcribe this video and create Anki-compatible flashcards: [URL]
+```
+
+---
+
+## ⏱️ Performance
+
+- **Audio Download**: ~10-30 seconds
+- **Transcription**: ~2-5 minutes for 10-minute video
+- **AI Analysis** (with Claude): ~1-2 minutes
+- **Total Time**: ~7-8 minutes for complete study materials
+
+**vs Manual Approach**: ~2-4 hours
+
+**Time Saved: ~3.5 hours per video!**
+
+---
+
+## 🤖 How the AI Skill Works
+
+When you ask Claude to transcribe a video:
+
+1. **Claude recognizes** the request triggers this skill
+2. **Claude executes** the transcription script
+3. **Claude reads** the generated transcript
+4. **Claude analyzes** using its language understanding:
+   - Identifies key vocabulary
+   - Generates accurate romaji
+   - Provides context-aware translations
+   - Explains grammar patterns
+   - Creates study recommendations
+5. **Claude formats** everything into beautiful tables
+6. **Claude presents** complete study materials to you
+
+All automatically - no manual steps!
+
+---
+
+## 🆚 Comparison
+
+| Feature | Manual Script | AI Skill |
+|---------|--------------|----------|
+| Installation | Anywhere | Claude skills directory |
+| Usage | Run Python | Ask Claude |
+| Vocabulary | Manual extraction | Auto-extracted |
+| Romaji | Manual | AI-generated |
+| Translations | Look up manually | AI-provided |
+| Grammar | Analyze yourself | AI-explained |
+| Time | 15-20 min manual | 30 sec asking |
+| Output | Raw data | Formatted materials |
+
+---
+
+## 📖 Documentation
+
+- **Skill Guide**: See [skill.md](skill.md)
+- **Examples**: See [examples/](examples/)
+- **Requirements**: See [requirements.txt](requirements.txt)
 
 ---
 
 ## 🤝 Contributing
 
-Contributions welcome! Feel free to:
+Contributions welcome!
+
 - 🐛 Report bugs
-- 💡 Suggest features
+- 💡 Suggest features  
 - 🔧 Submit pull requests
 - ⭐ Star the repository
 
@@ -272,12 +353,6 @@ Contributions welcome! Feel free to:
 ## 📄 License
 
 MIT License - see [LICENSE](LICENSE) file for details
-
----
-
-## 👤 Author
-
-Created by [@chinazane](https://github.com/chinazane)
 
 ---
 
@@ -290,16 +365,26 @@ Created by [@chinazane](https://github.com/chinazane)
 
 ---
 
-## ⭐ Support
+## 💬 Support
 
-If you find this tool helpful:
-- ⭐ **Star this repository**
-- 🐛 **Report issues** on GitHub
-- 💬 **Share with others** learning Japanese
-- 🤝 **Contribute** improvements
+- 🐛 **Issues**: https://github.com/chinazane/Youtube-Transcriber/issues
+- ⭐ **Star** if you find this helpful!
+- 🔗 **Share** with other Japanese learners
 
 ---
 
-**Happy Learning! 🎌 頑張ってください！**
+## 🎯 Quick Links
 
-*Powered by Whisper AI + Claude AI*
+- **Install as Claude Skill**: `git clone https://github.com/chinazane/Youtube-Transcriber.git ~/.claude/skills/transcribe-jp-video`
+- **Standalone Use**: `git clone https://github.com/chinazane/Youtube-Transcriber.git`
+- **Documentation**: [skill.md](skill.md)
+
+---
+
+**Transform Japanese YouTube videos into comprehensive study materials with the power of AI!**
+
+**頑張ってください！🎌**
+
+---
+
+*Powered by OpenAI Whisper + Claude AI*

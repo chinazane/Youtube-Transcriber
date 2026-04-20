@@ -1,2 +1,13 @@
+# Python Dependencies for Japanese YouTube Transcriber AI Skill
+
+# YouTube video downloading
 yt-dlp>=2023.0.0
+
+# Speech-to-text transcription
 openai-whisper>=20230314
+
+# Note: Also requires ffmpeg (system package)
+# Install with:
+#   macOS: brew install ffmpeg
+#   Ubuntu: sudo apt-get install ffmpeg
+#   Windows: Download from https://ffmpeg.org/download.html
