@@ -30,11 +30,14 @@ This is **NOT just a Python script** - it's an **AI-powered skill** for Claude C
 1. **Install the skill**:
 ```bash
 # Clone to your Claude skills directory
-git clone https://github.com/chinazane/Youtube-Transcriber.git ~/.claude/skills/transcribe-jp-video
+git clone https://github.com/chinazane/Youtube-Transcriber.git ~/.claude/skills/transcribe-japanese-video
 
 # Install dependencies
-cd ~/.claude/skills/transcribe-jp-video
+cd ~/.claude/skills/transcribe-japanese-video
 pip install -r requirements.txt
+
+# Install ffmpeg (macOS)
+brew install ffmpeg
 ```
 
 2. **Use with Claude**:
@@ -58,7 +61,7 @@ cd Youtube-Transcriber
 pip install -r requirements.txt
 
 # Run transcription
-python transcribe.py <youtube-url> [lesson-name]
+python scripts/transcribe.py <youtube-url>
 ```
 
 Then ask Claude to analyze the generated transcript.
@@ -202,12 +205,13 @@ Then paste the transcript into Claude for analysis.
 
 ```
 Youtube-Transcriber/
-├── skill.md              # AI skill documentation
-├── transcribe.py         # Transcription script
-├── requirements.txt      # Python dependencies
-├── README.md            # This file
-├── LICENSE              # MIT License
-└── examples/            # Sample outputs
+├── SKILL.md             # AI skill documentation (Claude Code)
+├── scripts/
+│   └── transcribe.py    # Transcription script
+├── requirements.txt     # Python dependencies
+├── README.md           # This file
+├── LICENSE             # MIT License
+└── examples/           # Sample outputs
     ├── sample_transcript.txt
     ├── sample_flashcards.txt
     └── sample_review.md
@@ -375,9 +379,9 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 ## 🎯 Quick Links
 
-- **Install as Claude Skill**: `git clone https://github.com/chinazane/Youtube-Transcriber.git ~/.claude/skills/transcribe-jp-video`
+- **Install as Claude Skill**: `git clone https://github.com/chinazane/Youtube-Transcriber.git ~/.claude/skills/transcribe-japanese-video`
 - **Standalone Use**: `git clone https://github.com/chinazane/Youtube-Transcriber.git`
-- **Documentation**: [skill.md](skill.md)
+- **Documentation**: [SKILL.md](SKILL.md)
 
 ---
 
